@@ -1,0 +1,1 @@
+java -jar selenium-server-standalone-3.12.0.jar -role node -hub http://localhost:4545/grid/register/

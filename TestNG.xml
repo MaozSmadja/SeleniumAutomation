@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests"   thread-count="10">
+
+    <listeners>
+        <listener class-name="Utilities.Listener" />
+    </listeners>
+
+    <test name="test on chrome" thread-count="5" parallel="methods" >
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="Tests.LoginTest"/>
+            <class name="Tests.FirstLevelTabsTest"/>
+            <class name="Tests.AddNewUserTest"/>
+        </classes>
+    </test>
+
+
+    <test name="test on firefox" thread-count="5" parallel="methods" >
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="Tests.LoginTest"/>
+            <class name="Tests.FirstLevelTabsTest"/>
+            <class name="Tests.AddNewUserTest"/>
+        </classes>
+    </test>
+</suite>
